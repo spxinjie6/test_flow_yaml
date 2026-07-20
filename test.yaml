@@ -1,44 +1,35 @@
-idField: data-grafana_id
+cellIdPreamble: "cell-"
 
-controls:
-  - id: memory1
+cells:
+  PMW4U0LTd0qBZhDIeTCv-1:
+    dataRef: A
     label:
-      dataRef: memory_usage
-    fill:
-      rules:
-        - condition: value <= 70
-          color: green
-        - condition: value > 70 && value <= 85
-          color: orange
-        - condition: value > 85
-          color: red
-    stroke:
-      rules:
-        - condition: true
-          color: "#333"
-
-  - id: db1
+      units: "%"
+      decimalPoints: 0
+    fillColor:
+      thresholds:
+        - {color: "green", level: 0}
+        - {color: "orange", level: 70}
+        - {color: "red", level: 85}
+  PMW4U0LTd0qBZhDIeTCv-2:
+    dataRef: B
     label:
-      dataRef: db_status
-    fill:
-      rules:
-        - condition: value == 1
-          color: green
-        - condition: value == 0
-          color: red
-
-  - id: connect1
+      units: "none"
+      decimalPoints: 0
+    fillColor:
+      thresholds:
+        - {color: "green", level: 1}
+        - {color: "red", level: 0}
+  PMW4U0LTd0qBZhDIeTCv-3:
+    dataRef: C
     label:
-      dataRef: connect_speed
       suffix: " Mbps"
-    stroke:
-      rules:
-        - condition: value > 100
-          color: green
-        - condition: value > 50 && value <= 100
-          color: orange
-        - condition: value <= 50
-          color: red
+      decimalPoints: 0
+    strokeColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "orange", level: 50}
+        - {color: "green", level: 100}
     flow:
-      direction: forward
+      direction: "forward"
       speed: 30
