@@ -5,11 +5,7 @@ cells:
     dataRef: memory_usage
     label:
       decimalPoints: 0
-    fillColor:
-      thresholds:
-        - {color: "green", level: 0}
-        - {color: "orange", level: 70}
-        - {color: "red", level: 85}
+    fillColor: "blue"
 
   PMW4U0LTd0qBZhDIeTCv-2:
     dataRef: db_status
