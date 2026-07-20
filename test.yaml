@@ -1,0 +1,54 @@
+idField: grafana_id
+
+controls:
+  # 圆形 - memory1
+  - id: memory1
+    label:
+      dataRef: memory_usage
+    fill:
+      # 根据阈值改变填充色，例如内存使用率
+      rules:
+        - condition: value <= 70
+          color: green
+        - condition: value > 70 && value <= 85
+          color: orange
+        - condition: value > 85
+          color: red
+    # 可选：修改描边颜色
+    stroke:
+      rules:
+        - condition: true
+          color: "#333"
+
+  # 正方形 - db1
+  - id: db1
+    label:
+      dataRef: db_status
+    fill:
+      rules:
+        - condition: value == 1
+          color: green
+        - condition: value == 0
+          color: red
+
+  # 箭头连线 - connect1
+  - id: connect1
+    label:
+      dataRef: connect_speed
+      # 显示在连线旁边的文字
+      suffix: " Mbps"
+    stroke:
+      # 连线颜色根据速度变化
+      rules:
+        - condition: value > 100
+          color: green
+        - condition: value > 50 && value <= 100
+          color: orange
+        - condition: value <= 50
+          color: red
+    # 箭头流动动画（可选）
+    flow:
+      # 方向：正向或反向
+      direction: forward
+      # 流动速度（百分比）
+      speed: 30
