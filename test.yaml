@@ -2,7 +2,7 @@ cellIdPreamble: "cell-"
 
 cells:
   PMW4U0LTd0qBZhDIeTCv-1:
-    dataRef: A
+    dataRef: memory_usage
     label:
       units: "%"
       decimalPoints: 0
@@ -12,7 +12,7 @@ cells:
         - {color: "orange", level: 70}
         - {color: "red", level: 85}
   PMW4U0LTd0qBZhDIeTCv-2:
-    dataRef: B
+    dataRef: db_status
     label:
       units: "none"
       decimalPoints: 0
@@ -21,7 +21,7 @@ cells:
         - {color: "green", level: 1}
         - {color: "red", level: 0}
   PMW4U0LTd0qBZhDIeTCv-3:
-    dataRef: C
+    dataRef: connect_speed
     label:
       suffix: " Mbps"
       decimalPoints: 0
